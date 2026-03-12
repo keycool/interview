@@ -1,0 +1,110 @@
+{
+  "skill_name": "interview",
+  "version": "2.1.0",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "帮我写一篇关于我创业失败的公众号文章",
+      "expected_output": "进入访谈流程，询问文章类型（长文/短文/社交帖）",
+      "assertions": [
+        {
+          "type": "trigger",
+          "text": "输出包含文章类型选择",
+          "passed": false,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "/interview",
+      "expected_output": "直接进入访谈流程，询问文章类型",
+      "assertions": [
+        {
+          "type": "workflow",
+          "text": "输出开场问候和长文/短文选择",
+          "passed": false,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "开始访谈",
+      "expected_output": "进入访谈流程",
+      "assertions": [
+        {
+          "type": "trigger",
+          "text": "输出访谈开场白",
+          "passed": false,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "采访我",
+      "expected_output": "进入访谈流程",
+      "assertions": [
+        {
+          "type": "trigger",
+          "text": "输出访谈开场白",
+          "passed": false,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "帮我写个故事，关于我在大厂工作5年后离职的经历",
+      "expected_output": "进入访谈流程，询问文章类型",
+      "assertions": [
+        {
+          "type": "workflow",
+          "text": "识别为职场人类别，开始背景收集",
+          "passed": false,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "写推文",
+      "expected_output": "进入访谈流程，选择社交帖类型",
+      "assertions": [
+        {
+          "type": "workflow",
+          "text": "识别为社交帖类型",
+          "passed": false,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "发微博",
+      "expected_output": "进入访谈流程，选择社交帖类型",
+      "assertions": [
+        {
+          "type": "workflow",
+          "text": "识别为社交帖类型",
+          "passed": false,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "我想分享我的经历，是关于自由职业做内容创作的",
+      "expected_output": "进入访谈流程",
+      "assertions": [
+        {
+          "type": "workflow",
+          "text": "识别为自由职业者身份",
+          "passed": false,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}
